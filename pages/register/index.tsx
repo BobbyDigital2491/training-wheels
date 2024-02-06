@@ -11,6 +11,13 @@ export default function Register() {
   return (
     <AuthPage
       type="register"
+      formProps={{
+        initialValues: {
+          userName: "info@viccci.xyz",
+          email: "info@viccci.xyz",
+          password: "Dashboard",
+        },
+      }}
       title={
         <ThemedTitleV2
           collapsed={false}

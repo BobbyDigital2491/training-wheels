@@ -12,8 +12,8 @@ export default function Login() {
       type="login"
       formProps={{
         initialValues: {
-          email: "info@refine.dev",
-          password: "refine-supabase",
+          email: "info@viccci.xyz",
+          password: "Dashboard",
         },
       }}
       title={
