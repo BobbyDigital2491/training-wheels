@@ -97,6 +97,16 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     },
                   },
                   {
+                    name: "tasks",
+                    list: "/tasks",
+                    create: "/tasks/create",
+                    edit: "/tasks/edit/:id",
+                    show: "/tasks/show/:id",
+                    meta: {
+                      canDelete: true,
+                    },
+                  },
+                  {
                     name: "categories",
                     list: "/categories",
                     create: "/categories/create",

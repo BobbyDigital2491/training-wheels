@@ -27,5 +27,7 @@ export interface ICategory {
     categories: ICategory[]; // Assuming it's a one-to-many relationship
     sort: string | null; // Assuming `sort` can be null based on your SQL schema
     images: IFile[];
+    category_id: number | null;
+    
   }
   

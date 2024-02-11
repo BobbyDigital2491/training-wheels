@@ -4,7 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { authProvider } from "src/authProvider";
 
 export default function BlogPostEdit() {
-  return <AntdEditInferencer />;
+  return <AntdEditInferencer hideCodeViewerInProduction/>;
 }
 
 export const getServerSideProps: GetServerSideProps<{}> = async (context) => {

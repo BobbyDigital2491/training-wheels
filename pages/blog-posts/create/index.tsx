@@ -3,8 +3,8 @@ import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { authProvider } from "src/authProvider";
 
-export default function BlogPostCreate() {
-  return <AntdCreateInferencer />;
+export default function BlogPostsCreate() {
+  return <AntdCreateInferencer hideCodeViewerInProduction/>;
 }
 
 export const getServerSideProps: GetServerSideProps<{}> = async (context) => {

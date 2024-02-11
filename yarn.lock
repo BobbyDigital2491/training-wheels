@@ -1068,7 +1068,7 @@
     temp "^0.9.4"
     tslib "^2.3.1"
 
-"@refinedev/core@^4.46.1", "@refinedev/core@^4.47.0":
+"@refinedev/core@^4.46.1":
   version "4.47.0"
   resolved "https://registry.yarnpkg.com/@refinedev/core/-/core-4.47.0.tgz#938d860f034c94ded6beb4543a749f26804e376c"
   integrity sha512-kCKw7zvm6kbdUmBcoDLEF3+lN6d+FZ2x++KEWfbiMDaU8RndMCgPwywz3Edi1ehbZ5e4PkitenwrsKVmrRBRCw==
@@ -1159,15 +1159,16 @@
     lodash "^4.17.21"
     lodash-es "^4.17.21"
 
-"@refinedev/inferencer@^4.5.16":
-  version "4.5.18"
-  resolved "https://registry.yarnpkg.com/@refinedev/inferencer/-/inferencer-4.5.18.tgz#9585ea701ad88b94f91c338b0834f672c889519f"
-  integrity sha512-zg3aZC9H108prwLtf120CNYyNsr+vuwa2XPXUnArbuy+LzIO6tCUFhZblsQUf+olR7Cf9rPUmEKOPe/Ne3clUA==
+"@refinedev/inferencer@4.5.19":
+  version "4.5.19"
+  resolved "https://registry.yarnpkg.com/@refinedev/inferencer/-/inferencer-4.5.19.tgz#b090f611986157339089e90e4cafa49613bea286"
+  integrity sha512-lgBZ3N47h/JTPTA4P0HfBe1k+kQWGkW9zfvmF+RXzfk3+5Ibfl5rZuxCAS9c0wUCprMdH9ntHWE9ctZ3YQaA9Q==
   dependencies:
     "@aliemir/react-live" "^4.0.0"
-    "@refinedev/core" "^4.47.0"
+    "@refinedev/core" "^4.46.1"
     "@tabler/icons" "^1.119.0"
     dayjs "^1.10.7"
+    graphql "^15.6.1"
     graphql-tag "^2.12.6"
     lodash "^4.17.21"
     lodash-es "^4.17.21"
@@ -1208,10 +1209,10 @@
     tslib "^2.3.1"
     warn-once "^0.1.0"
 
-"@refinedev/nextjs-router@^5.5.5":
-  version "5.5.6"
-  resolved "https://registry.yarnpkg.com/@refinedev/nextjs-router/-/nextjs-router-5.5.6.tgz#2b330b7f53741d2ff14408234993b2136fad05de"
-  integrity sha512-K0VOSfe4CdcfkHkTJyiUbrRzwLhLfQG9DhcUi/qsVWcioqD2u7eSeLPolI5WsnzdhV7TdRsm1/2N3O8GDCyNxg==
+"@refinedev/nextjs-router@5.5.7":
+  version "5.5.7"
+  resolved "https://registry.yarnpkg.com/@refinedev/nextjs-router/-/nextjs-router-5.5.7.tgz#f63fae03fee74b961dc03acfdf2951505bb6e5bd"
+  integrity sha512-tmZuryorJtgWr2lvuUI8AjAVNyZpVJvGr/v+t+TJp5uiAY8RLuOlUxGBIiYvlFpA2Ach2kaaqx+yBa8rC2Gmsw==
   dependencies:
     qs "^6.10.1"
     warn-once "^0.1.0"
@@ -3163,6 +3164,11 @@ graphql-tag@^2.12.6:
   integrity sha512-FdSNcu2QQcWnM2VNvSCCDCVS5PpPqpzgFT8+GXzqJuoDd0CBncxCY278u4mhRO7tMgo2JjgJA5aZ+nWSQ/Z+xg==
   dependencies:
     tslib "^2.1.0"
+
+graphql@^15.6.1:
+  version "15.8.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.8.0.tgz#33410e96b012fa3bdb1091cc99a94769db212b38"
+  integrity sha512-5gghUc24tP9HRznNpV2+FIoq3xKkj5dTQqf4v0CpdPbFVwFkWoxOM+o+2OC9ZSvjEMTjfmG9QT+gcvggTwW1zw==
 
 graphql@^16.8.1:
   version "16.8.1"
