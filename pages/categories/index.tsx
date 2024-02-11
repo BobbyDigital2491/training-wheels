@@ -4,7 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { authProvider } from "src/authProvider";
 
 export default function CategoryList() {
-  return <AntdListInferencer />;
+  return <AntdListInferencer hideCodeViewerInProduction/>;
 }
 
 export const getServerSideProps: GetServerSideProps<{}> = async (context) => {
