@@ -77,11 +77,11 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                 i18nProvider={i18nProvider}
                 resources={[
                   {
-                    name: "blog_posts",
-                    list: "/blog-posts",
-                    create: "/blog-posts/create",
-                    edit: "/blog-posts/edit/:id",
-                    show: "/blog-posts/show/:id",
+                    name: "projects",
+                    list: "/projects",
+                    create: "/projects/create",
+                    edit: "/projects/edit/:id",
+                    show: "/projects/show/:id",
                     meta: {
                       canDelete: true,
                     },
@@ -116,8 +116,19 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                       canDelete: true,
                     },
                   },
+                  {
+                    name: "profiles",
+                    list: "/profiles",
+                    create: "/profiles/create",
+                    edit: "/profiles/edit/:id",
+                    show: "/profiles/show/:id",
+                    meta: {
+                      canDelete: true,
+                    },
+                  },
                 ]}
                 options={{
+                  liveMode:"auto",
                   syncWithLocation: true,
                   warnWhenUnsavedChanges: true,
                   useNewQueryKeys: true,

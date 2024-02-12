@@ -6,7 +6,7 @@ import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-export default function BlogPostList() {
+export default function ProjectList() {
   const { tableProps } = useTable();
 
   return (
@@ -15,7 +15,8 @@ export default function BlogPostList() {
         <Table.Column dataIndex="id" title="ID"/>
         <Table.Column dataIndex="title" title="Title" />
         <Table.Column dataIndex="content" title="Content" />
-        <Table.Column dataIndex="category_id" title="Category_ID" />
+        <Table.Column dataIndex="progress" title="Progress" />
+        <Table.Column dataIndex="on_task" title="On task" />
         <Table.Column
           title="Actions"
           dataIndex="actions"
