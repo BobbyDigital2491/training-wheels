@@ -12,7 +12,6 @@ export default function ProjectList() {
   return (
     <List>
       <Table {...tableProps} rowKey="id">
-        
         <Table.Column dataIndex="username" title="Username" />
         <Table.Column dataIndex="role" title="Role" />
         <Table.Column dataIndex="full_name" title="Full Name" />

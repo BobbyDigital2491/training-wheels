@@ -6,6 +6,7 @@ import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+
 export default function TaskList() {
   const { tableProps } = useTable();
 
@@ -30,6 +31,8 @@ export default function TaskList() {
         />
       </Table>
     </List>
+    
+    
   );
 };
 
