@@ -6,6 +6,8 @@ import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { ArrowDownOutlined, ArrowUpOutlined } from "@ant-design/icons";
 import type { Dayjs } from 'dayjs';
+import TimelineItem from "antd/lib/timeline/TimelineItem";
+
 
 export default function ProjectList() {
   const { tableProps } = useTable();
@@ -16,6 +18,7 @@ export default function ProjectList() {
 
   return (
     <Card title="Dashboard">
+        
         {/*Team Card*/}
         <Card title="Team">
       <Row gutter={16}>
@@ -40,7 +43,7 @@ export default function ProjectList() {
       <Row gutter={16}>
         <Col xs={24} sm={12} md={8} lg={8}>
           <Statistic
-            title="Active"
+            title="Completed"
             value={11.28}
             precision={2}
             valueStyle={{ color: '#3f8600' }}
@@ -50,7 +53,7 @@ export default function ProjectList() {
         </Col>
         <Col xs={24} sm={12} md={8} lg={8}>
           <Statistic
-            title="Active"
+            title="Pending"
             value={11.28}
             precision={2}
             valueStyle={{ color: 'red' }}
@@ -80,14 +83,36 @@ export default function ProjectList() {
 
 
        {/*Timeline Card*/}
-      <Card title="Timeline">
-        <Timeline>
-          <Timeline.Item>Sample</Timeline.Item>
-          <Timeline.Item>Sample</Timeline.Item>
-          <Timeline.Item>Sample</Timeline.Item>
-          <Timeline.Item>Sample</Timeline.Item>
-        </Timeline>
+       <Card title="Stats">
+      <Row gutter={16}>
+        <Col xs={24} sm={12} md={8} lg={8}>
+          <Statistic
+            title="Completed"
+            value={11.28}
+            precision={2}
+            valueStyle={{ color: '#3f8600' }}
+            prefix={<ArrowUpOutlined />}
+            suffix="%"
+          />
+        </Col>
+        <Col xs={24} sm={12} md={8} lg={8}>
+          <Statistic
+            title="Pending"
+            value={11.28}
+            precision={2}
+            valueStyle={{ color: 'red' }}
+            prefix={<ArrowDownOutlined />}
+            suffix="%"
+          />
+        </Col>
+        <Col xs={24} sm={12} md={8} lg={8}>
+          <Timeline><TimelineItem></TimelineItem></Timeline>
+        </Col>
+      </Row>
       </Card>
+      {/*New Card*/}
+    
+     
     </Card>
   );
 }
