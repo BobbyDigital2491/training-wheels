@@ -77,6 +77,16 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                 i18nProvider={i18nProvider}
                 resources={[
                   {
+                    name: "dashboard",
+                    list: "/dashboard",
+                    create: "/dashboard/create",
+                    edit: "/dashboard/edit/:id",
+                    show: "/dashboard/show/:id",
+                    meta: {
+                      canDelete: true,
+                    },
+                  },
+                  {
                     name: "projects",
                     list: "/projects",
                     create: "/projects/create",

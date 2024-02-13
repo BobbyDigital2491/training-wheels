@@ -1,6 +1,6 @@
 import React from "react";
 import { List, ShowButton, EditButton, useTable, DeleteButton } from "@refinedev/antd";
-import { Avatar, Card, Space, Table } from "antd";
+import { Avatar, Button, Card, Col, Row, Space, Statistic, Table } from "antd";
 import { BaseRecord } from "@refinedev/core";
 import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
@@ -11,15 +11,16 @@ export default function ProjectList() {
   const { tableProps } = useTable();
 
   return (
-    <Card title="Team Management">
+    <>
+  {/*Table*/}
+  <Card title="Team Management">
       <Table {...tableProps} rowKey="id">
         <Table.Column
           dataIndex="avatar_url"
           title="User"
           render={(avatarUrl) => (
             <Avatar shape="circle" src={avatarUrl} size={50} icon={<UserOutlined />} />
-          )}
-        />
+          )} />
         <Table.Column dataIndex="username" title="Username" />
         <Table.Column dataIndex="role" title="Role" />
         <Table.Column dataIndex="full_name" title="Full Name" />
@@ -32,10 +33,10 @@ export default function ProjectList() {
               <ShowButton hideText size="small" recordItemId={record.id} />
               <EditButton hideText size="small" recordItemId={record.id} />
             </Space>
-          )}
-        />
+          )} />
       </Table>
-      </Card>
+    </Card></>
+      
   );
 }
 
