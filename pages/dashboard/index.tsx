@@ -4,12 +4,10 @@ import { Card, Col, Row, Space, Statistic, Table, Timeline, Calendar, Checkbox, 
 import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { ArrowDownOutlined, ArrowUpOutlined } from "@ant-design/icons";
+import { ArrowDownOutlined, ArrowUpOutlined, DashboardOutlined } from "@ant-design/icons";
 import type { Dayjs } from 'dayjs';
 import TimelineItem from "antd/lib/timeline/TimelineItem";
-
-
-
+import { useState } from "react";
 
 export default function ProjectList() {
   const { tableProps } = useTable();
@@ -17,6 +15,8 @@ export default function ProjectList() {
   const onPanelChange = (value: Dayjs, mode: any) => {
     console.log(value.format('YYYY-MM-DD'), mode);
   };
+
+  
 
   return (
     <Card title="Dashboard">
@@ -44,7 +44,7 @@ export default function ProjectList() {
       <Row gutter={16}>
         <Col xs={24} sm={12} md={8} lg={8}>
           <Statistic
-            title="Completed"
+            title="Completed Projects"
             value={11.28}
             precision={2}
             valueStyle={{ color: '#3f8600' }}
@@ -54,7 +54,7 @@ export default function ProjectList() {
         </Col>
         <Col xs={24} sm={12} md={8} lg={8}>
           <Statistic
-            title="Pending"
+            title="Pending Projects"
             value={11.28}
             precision={2}
             valueStyle={{ color: 'red' }}
@@ -64,17 +64,25 @@ export default function ProjectList() {
         </Col>
         <Col xs={24} sm={12} md={8} lg={8}>
           <Statistic
-            title="Active"
-            value={11.28}
+            title="Sales"
+            value={50}
             precision={2}
             valueStyle={{ color: 'red' }}
             prefix={<ArrowDownOutlined />}
             suffix="%"
           />
         </Col>
+        <br/><br/><br/><br/><br/>
+
+        {/*Progress Bar*/}
+        <h3>Days until Bell Event</h3> 
+        <Progress strokeLinecap="butt" percent={75} />
+
+      {/*End of Stats*/}
       </Row>
       </Card>
       <br />
+      {/*End of Stats*/}
 
        {/*Calendar Card*/}
       <Card title="Calendar">
@@ -87,22 +95,26 @@ export default function ProjectList() {
        <Card title="Timeline">
       <Row gutter={16}>
         <Col xs={24} sm={12} md={8} lg={8}>
-        <h1>Past</h1><Timeline>
+        <h1>Past</h1>
+        <Timeline >
           <TimelineItem>Mercedez Meeting - Feb 15 2024</TimelineItem>
           <TimelineItem>Augmentique Meeting - Feb 14 2024</TimelineItem>
           <TimelineItem>Bell Meeting - Feb 27 2024</TimelineItem>
             </Timeline>
         </Col>
+        
         <Col xs={24} sm={12} md={8} lg={8}>
-        <h1>Upcoming</h1><Timeline>
+        <h1>Upcoming</h1>
+        <Timeline>
           <TimelineItem>Mercedez Meeting - Feb 15 2024</TimelineItem>
           <TimelineItem>Augmentique Meeting - Feb 14 2024</TimelineItem>
           <TimelineItem>Bell Meeting - Feb 27 2024</TimelineItem>
             </Timeline>
         </Col>
-        <Col xs={24} sm={12} md={8} lg={8}>
-          
-        <h1>Next Month</h1><Timeline>
+        
+        <Col xs={24} sm={12} md={8} lg={8}>  
+        <h1>Next Month</h1>
+        <Timeline >
           <TimelineItem>Mercedez Meeting - Feb 15 2024</TimelineItem>
           <TimelineItem>Augmentique Meeting - Feb 14 2024</TimelineItem>
           <TimelineItem>Bell Meeting - Feb 27 2024</TimelineItem>
@@ -120,17 +132,32 @@ export default function ProjectList() {
       <Form.Item name="fieldA" valuePropName="checked" >
       <Checkbox name=""/> Bell Event Flyer
       </Form.Item>
+      <Form.Item name="fieldA" valuePropName="checked" >
+      <Checkbox name=""/> Budget Planning
+      </Form.Item>
+      <Form.Item name="fieldA" valuePropName="checked" >
+      <Checkbox name=""/> Budget Planning
+      </Form.Item>
       </Col>
+
       <Col xs={24} sm={12} md={8} lg={8}>
       <Form.Item name="fieldA" valuePropName="checked" >
       <Checkbox name=""/> Augmentique Test Flight
       </Form.Item>
-     </Col>
-     <Col xs={24} sm={12} md={8} lg={8}>
       <Form.Item name="fieldA" valuePropName="checked" >
       <Checkbox name=""/> Budget Planning
       </Form.Item>
      </Col>
+
+     <Col xs={24} sm={12} md={8} lg={8}>
+     <Form.Item name="fieldA" valuePropName="checked" >
+      <Checkbox name=""/> Budget Planning
+      </Form.Item>
+      <Form.Item name="fieldA" valuePropName="checked" >
+      <Checkbox name=""/> Budget Planning
+      </Form.Item>
+     </Col>
+
      </Row>
         </Card>
     

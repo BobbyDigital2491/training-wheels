@@ -1,5 +1,5 @@
 import React from "react";
-import { List, ShowButton, EditButton, useTable, DeleteButton } from "@refinedev/antd";
+import { List, ShowButton, EditButton, useTable, DeleteButton, Create, CreateButton } from "@refinedev/antd";
 import { Card, Col, Row, Space, Statistic, Table } from "antd";
 import { BaseRecord } from "@refinedev/core";
 import { authProvider } from "src/authProvider";
@@ -10,25 +10,30 @@ export default function ProjectList() {
   const { tableProps } = useTable();
 
   return (
-    <><Card title="Projects" >
-        <Table {...tableProps} rowKey="id">
-          <Table.Column dataIndex="id" title="ID" />
-          <Table.Column dataIndex="title" title="Title" />
-          <Table.Column dataIndex="content" title="Content" />
-          <Table.Column dataIndex="progress" title="Progress" />
-          <Table.Column dataIndex="on_task" title="On task" />
-          <Table.Column
-            title="Actions"
-            dataIndex="actions"
-            render={(_, record: BaseRecord) => (
-              <Space>
-                <ShowButton hideText size="small" recordItemId={record.id} />
-                <EditButton hideText size="small" recordItemId={record.id} />
-                <DeleteButton hideText size="small" recordItemId={record.id} />
-              </Space>
-            )} />
-        </Table>
-      </Card></>
+    <>
+    <Card>
+    <List>
+    <Table {...tableProps} rowKey="id">
+    <CreateButton/>
+      <Table.Column dataIndex="id" title="ID" />
+      <Table.Column dataIndex="title" title="Title" />
+      <Table.Column dataIndex="content" title="Content" />
+      <Table.Column dataIndex="completion_status" title="Progress" />
+      <Table.Column dataIndex="full_name" title="On task" />
+      <Table.Column
+        title="Actions"
+        dataIndex="actions"
+        render={(_, record: BaseRecord) => (
+          <Space>
+            <ShowButton hideText size="small" recordItemId={record.id} />
+            <EditButton hideText size="small" recordItemId={record.id} />
+            <DeleteButton hideText size="small" recordItemId={record.id} />
+          </Space>
+        )} />
+    </Table>
+    </List>
+    </Card>
+      </>
   );
 };
 

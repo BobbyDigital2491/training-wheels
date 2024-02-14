@@ -1,6 +1,6 @@
 import React from "react";
 import { List, ShowButton, EditButton, useTable, DeleteButton } from "@refinedev/antd";
-import { Space, Table } from "antd";
+import { Card, Space, Table } from "antd";
 import { BaseRecord } from "@refinedev/core";
 import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
@@ -11,7 +11,8 @@ export default function TaskList() {
   const { tableProps } = useTable();
 
   return (
-    <List>
+    <Card>
+      <List>
       <Table {...tableProps} rowKey="id">
         <Table.Column dataIndex="id" title="ID"/>
         <Table.Column dataIndex="to_be_done" title="To Do" />
@@ -31,6 +32,7 @@ export default function TaskList() {
         />
       </Table>
     </List>
+    </Card>
     
     
   );
