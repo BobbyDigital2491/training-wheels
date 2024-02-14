@@ -83,7 +83,7 @@ export default function ProjectList() {
 
 
        {/*Timeline Card*/}
-       <Card title="Stats">
+       <Card title="Timeline">
       <Row gutter={16}>
         <Col xs={24} sm={12} md={8} lg={8}>
           <Statistic
@@ -106,7 +106,11 @@ export default function ProjectList() {
           />
         </Col>
         <Col xs={24} sm={12} md={8} lg={8}>
-          <Timeline><TimelineItem></TimelineItem></Timeline>
+          <Timeline>
+          <TimelineItem>Mercedez Meeting - Feb 15 2024</TimelineItem>
+          <TimelineItem>Augmentique Meeting - Feb 14 2024</TimelineItem>
+          <TimelineItem>Bell Meeting - Feb 27 2024</TimelineItem>
+            </Timeline>
         </Col>
       </Row>
       </Card>
