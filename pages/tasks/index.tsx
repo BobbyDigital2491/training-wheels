@@ -14,7 +14,7 @@ export default function TaskList() {
     <Card>
       <List>
       <Table {...tableProps} rowKey="id">
-        <Table.Column dataIndex="id" title="ID"/>
+        
         <Table.Column dataIndex="to_be_done" title="To Do" />
         <Table.Column dataIndex="complete" title="Complete" />
         <Table.Column dataIndex="pending" title="Pending" />

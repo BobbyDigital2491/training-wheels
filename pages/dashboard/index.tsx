@@ -21,7 +21,7 @@ export default function ProjectList() {
   return (
     <Card title="Dashboard" >
         {/*Team Card*/}
-        <Card title="Team">
+        <Card title="General">
       <Row gutter={16}>
         <Col xs={24} sm={12} md={6} lg={6}>
           <Statistic title="Active Users" value={3} prefix={<UserOutlined />} />
@@ -129,7 +129,7 @@ export default function ProjectList() {
       <Checkbox name=""/> Bell Event Flyer
       </Form.Item>
       <Form.Item name="fieldA" valuePropName="checked" >
-      <Checkbox name=""/> Budget Planning
+      <Checkbox name=""/> V2 Magazine
       </Form.Item>
       <Form.Item name="fieldA" valuePropName="checked" >
       <Checkbox name=""/> Budget Planning
@@ -141,7 +141,7 @@ export default function ProjectList() {
       <Checkbox name=""/> Augmentique Test Flight
       </Form.Item>
       <Form.Item name="fieldA" valuePropName="checked" >
-      <Checkbox name=""/> Budget Planning
+      <Checkbox name=""/> V2 Magazine
       </Form.Item>
      </Col>
 

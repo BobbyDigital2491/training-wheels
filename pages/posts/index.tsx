@@ -13,7 +13,7 @@ export default function PostList() {
     <Card>
     <List>
       <Table {...tableProps} rowKey="id">
-        <Table.Column dataIndex="id" title="Id" />
+        
         <Table.Column dataIndex="title" title="Title" />
         <Table.Column dataIndex="content" title="Content" />
         <Table.Column dataIndex="created_at" title="Created at" />

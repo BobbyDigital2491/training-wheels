@@ -1,32 +1,19 @@
 import React from "react";
 import { List, ShowButton, EditButton, useTable, DeleteButton } from "@refinedev/antd";
-import { Avatar, Input, Space, Table } from "antd";
+import { Avatar, Card, Input, Space, Table } from "antd";
 import { BaseRecord } from "@refinedev/core";
 import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import CardGrid from "@components/CardGrid";
 
 export default function CategoryList() {
   const { tableProps } = useTable();
 
   return (
-    <List>
-      <Table {...tableProps} rowKey="id">
-        <Table.Column dataIndex="tasks" title="Tasks" />
-        <Table.Column dataIndex="posts" title="Posts" />
-        <Table.Column
-          title="Actions"
-          dataIndex="actions"
-          render={(_, record: BaseRecord) => (
-            <Space>
-              <ShowButton hideText size="small" recordItemId={record.id} />
-              <EditButton hideText size="small" recordItemId={record.id} />
-              <DeleteButton hideText size="small" recordItemId={record.id} />
-            </Space>
-          )}
-        />
-      </Table>
-    </List>
+    <Card title="Categories">
+    <CardGrid/>
+    </Card>
   );
 };
 

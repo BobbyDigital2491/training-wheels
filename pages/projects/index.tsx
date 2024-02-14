@@ -14,9 +14,8 @@ export default function ProjectList() {
     <Card>
     <List>
     <Table {...tableProps} rowKey="id">
-    <CreateButton/>
-      <Table.Column dataIndex="id" title="ID" />
-      <Table.Column dataIndex="title" title="Title" />
+      
+      <Table.Column dataIndex="projects" title="Title" />
       <Table.Column dataIndex="content" title="Content" />
       <Table.Column dataIndex="completion_status" title="Progress" />
       <Table.Column dataIndex="full_name" title="On task" />

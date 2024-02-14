@@ -24,7 +24,8 @@ export default function ProjectList() {
         <Table.Column dataIndex="username" title="Username" />
         <Table.Column dataIndex="role" title="Role" />
         <Table.Column dataIndex="full_name" title="Full Name" />
-        <Table.Column dataIndex="updated_at" title="Joined" />
+        <Table.Column dataIndex="full_name" title="Full Name" />
+        <Table.Column dataIndex="email_address" title="Email" />
         <Table.Column
           title="Actions"
           dataIndex="actions"
