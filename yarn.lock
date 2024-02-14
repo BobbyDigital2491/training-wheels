@@ -325,7 +325,7 @@
     d3-array "^3.2.4"
     d3-hierarchy "^3.1.2"
 
-"@antv/g2@^5.1.8", "@antv/g2@^5.1.9":
+"@antv/g2@^5.1.15", "@antv/g2@^5.1.8", "@antv/g2@^5.1.9":
   version "5.1.15"
   resolved "https://registry.yarnpkg.com/@antv/g2/-/g2-5.1.15.tgz#c6abb97f6164a27b04ea832931424845fbb2c2ef"
   integrity sha512-WiISs4GUOzHlA4vrkt+eQfr1+LVIAuv4AkfFCRzTprayMO72pLAdgTcwUg9YlvafwM220r9FQD1nXIlYNXOOhA==

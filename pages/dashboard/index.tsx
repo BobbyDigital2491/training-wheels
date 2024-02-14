@@ -1,12 +1,14 @@
 import React from "react";
 import { useTable } from "@refinedev/antd";
-import { Card, Col, Row, Space, Statistic, Table, Timeline, Calendar } from "antd";
+import { Card, Col, Row, Space, Statistic, Table, Timeline, Calendar, Checkbox, Form, Progress } from "antd";
 import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { ArrowDownOutlined, ArrowUpOutlined } from "@ant-design/icons";
 import type { Dayjs } from 'dayjs';
 import TimelineItem from "antd/lib/timeline/TimelineItem";
+
+
 
 
 export default function ProjectList() {
@@ -18,7 +20,11 @@ export default function ProjectList() {
 
   return (
     <Card title="Dashboard">
-        
+        <Space wrap>
+    <Progress type="dashboard" percent={75} gapDegree={100}/>
+    
+  </Space>
+
         {/*Team Card*/}
         <Card title="Team">
       <Row gutter={16}>
@@ -86,27 +92,22 @@ export default function ProjectList() {
        <Card title="Timeline">
       <Row gutter={16}>
         <Col xs={24} sm={12} md={8} lg={8}>
-          <Statistic
-            title="Completed"
-            value={11.28}
-            precision={2}
-            valueStyle={{ color: '#3f8600' }}
-            prefix={<ArrowUpOutlined />}
-            suffix="%"
-          />
+        <h1>Past</h1><Timeline>
+          <TimelineItem>Mercedez Meeting - Feb 15 2024</TimelineItem>
+          <TimelineItem>Augmentique Meeting - Feb 14 2024</TimelineItem>
+          <TimelineItem>Bell Meeting - Feb 27 2024</TimelineItem>
+            </Timeline>
         </Col>
         <Col xs={24} sm={12} md={8} lg={8}>
-          <Statistic
-            title="Pending"
-            value={11.28}
-            precision={2}
-            valueStyle={{ color: 'red' }}
-            prefix={<ArrowDownOutlined />}
-            suffix="%"
-          />
+        <h1>Upcoming</h1><Timeline>
+          <TimelineItem>Mercedez Meeting - Feb 15 2024</TimelineItem>
+          <TimelineItem>Augmentique Meeting - Feb 14 2024</TimelineItem>
+          <TimelineItem>Bell Meeting - Feb 27 2024</TimelineItem>
+            </Timeline>
         </Col>
         <Col xs={24} sm={12} md={8} lg={8}>
-          <Timeline>
+          
+        <h1>Next Month</h1><Timeline>
           <TimelineItem>Mercedez Meeting - Feb 15 2024</TimelineItem>
           <TimelineItem>Augmentique Meeting - Feb 14 2024</TimelineItem>
           <TimelineItem>Bell Meeting - Feb 27 2024</TimelineItem>
@@ -114,7 +115,29 @@ export default function ProjectList() {
         </Col>
       </Row>
       </Card>
-      {/*New Card*/}
+      <br/>
+
+      {/*To Do List*/}
+      
+      <Card title="To Do List">
+        <Row gutter={16}>
+      <Col xs={24} sm={12} md={8} lg={8}>
+      <Form.Item name="fieldA" valuePropName="checked" >
+      <Checkbox name=""/> Bell Event Flyer
+      </Form.Item>
+      </Col>
+      <Col xs={24} sm={12} md={8} lg={8}>
+      <Form.Item name="fieldA" valuePropName="checked" >
+      <Checkbox name=""/> Augmentique Test Flight
+      </Form.Item>
+     </Col>
+     <Col xs={24} sm={12} md={8} lg={8}>
+      <Form.Item name="fieldA" valuePropName="checked" >
+      <Checkbox name=""/> Budget Planning
+      </Form.Item>
+     </Col>
+     </Row>
+        </Card>
     
      
     </Card>
