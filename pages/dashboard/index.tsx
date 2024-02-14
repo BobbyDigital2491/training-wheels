@@ -20,11 +20,6 @@ export default function ProjectList() {
 
   return (
     <Card title="Dashboard">
-        <Space wrap>
-    <Progress type="dashboard" percent={75} gapDegree={100}/>
-    
-  </Space>
-
         {/*Team Card*/}
         <Card title="Team">
       <Row gutter={16}>
