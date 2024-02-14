@@ -4,7 +4,7 @@ import { Card, Col, Row, Space, Statistic, Table, Timeline, Calendar, Checkbox, 
 import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { ArrowDownOutlined, ArrowUpOutlined, DashboardOutlined } from "@ant-design/icons";
+import { AimOutlined, ArrowDownOutlined, ArrowUpOutlined, DashboardOutlined, FallOutlined, LikeOutlined, Loading3QuartersOutlined, ProjectOutlined, RiseOutlined, UserOutlined } from "@ant-design/icons";
 import type { Dayjs } from 'dayjs';
 import TimelineItem from "antd/lib/timeline/TimelineItem";
 import { useState } from "react";
@@ -19,21 +19,21 @@ export default function ProjectList() {
   
 
   return (
-    <Card title="Dashboard">
+    <Card title="Dashboard" >
         {/*Team Card*/}
         <Card title="Team">
       <Row gutter={16}>
         <Col xs={24} sm={12} md={6} lg={6}>
-          <Statistic title="Active Users" value={3} />
+          <Statistic title="Active Users" value={3} prefix={<UserOutlined />} />
         </Col>
         <Col xs={24} sm={12} md={6} lg={6}>
-          <Statistic title="Active Projects" value={5} />
+          <Statistic title="Active Projects" value={5}  prefix={<AimOutlined/>} />
         </Col>
         <Col xs={24} sm={12} md={6} lg={6}>
-          <Statistic title="Pending Projects" value={20} />
+          <Statistic title="Pending Projects" value={20}  prefix={<ProjectOutlined/>} />
         </Col>
         <Col xs={24} sm={12} md={6} lg={6}>
-          <Statistic title="Partnerships" value={112} />
+          <Statistic title="Partnerships" value={112} prefix={<LikeOutlined/>} />
         </Col>
       </Row>
       </Card>
@@ -48,7 +48,7 @@ export default function ProjectList() {
             value={11.28}
             precision={2}
             valueStyle={{ color: '#3f8600' }}
-            prefix={<ArrowUpOutlined />}
+            prefix={<RiseOutlined />}
             suffix="%"
           />
         </Col>
@@ -58,7 +58,7 @@ export default function ProjectList() {
             value={11.28}
             precision={2}
             valueStyle={{ color: 'red' }}
-            prefix={<ArrowDownOutlined />}
+            prefix={<FallOutlined />}
             suffix="%"
           />
         </Col>
@@ -72,11 +72,7 @@ export default function ProjectList() {
             suffix="%"
           />
         </Col>
-        <br/><br/><br/><br/><br/>
-
-        {/*Progress Bar*/}
-        <h3>Days until Bell Event</h3> 
-        <Progress strokeLinecap="butt" percent={75} />
+       
 
       {/*End of Stats*/}
       </Row>
