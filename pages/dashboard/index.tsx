@@ -104,9 +104,9 @@ export default function ProjectList() {
             <Col xs={24} sm={12} md={8} lg={8}>
               <h1>Past</h1>
               <Timeline>
-                <TimelineItem>Mercedez Meeting - Feb 15 2024</TimelineItem>
-                <TimelineItem>Augmentique Meeting - Feb 14 2024</TimelineItem>
-                <TimelineItem>Bell Meeting - Feb 27 2024</TimelineItem>
+                <TimelineItem>Investfest</TimelineItem>
+                <TimelineItem>Magazine V1</TimelineItem>
+                <TimelineItem>I-Phone App test</TimelineItem>
               </Timeline>
             </Col>
 
@@ -122,9 +122,10 @@ export default function ProjectList() {
             <Col xs={24} sm={12} md={8} lg={8}>
               <h1>Next Month</h1>
               <Timeline>
-                <TimelineItem>Mercedez Meeting - Feb 15 2024</TimelineItem>
-                <TimelineItem>Augmentique Meeting - Feb 14 2024</TimelineItem>
+                <TimelineItem>Mercedez Meeting - Feb 15 2024 4pm est</TimelineItem>
+                <TimelineItem>Augmentique Meeting - Feb 15 2024 12pm est</TimelineItem>
                 <TimelineItem>Bell Meeting - Feb 27 2024</TimelineItem>
+                <TimelineItem>Augmentique Test Flight</TimelineItem>
               </Timeline>
             </Col>
           </Row>

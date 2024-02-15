@@ -23,6 +23,7 @@ import { appWithTranslation, useTranslation } from "next-i18next";
 import { authProvider } from "src/authProvider";
 import { AppIcon } from "src/components/app-icon";
 import { supabaseClient } from "src/utility";
+import { DashboardOutlined, MenuOutlined, SolutionOutlined, StarOutlined, TableOutlined, UserOutlined } from "@ant-design/icons";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   noLayout?: boolean;
@@ -84,6 +85,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     show: "/dashboard/show/:id",
                     meta: {
                       canDelete: true,
+                      icon:<DashboardOutlined/>,
                     },
                   },
                   {
@@ -94,6 +96,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     show: "/projects/show/:id",
                     meta: {
                       canDelete: true,
+                      icon:<StarOutlined />,
                     },
                   },
                   {
@@ -104,6 +107,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     show: "/posts/show/:id",
                     meta: {
                       canDelete: true,
+                      icon:<TableOutlined />,
                     },
                   },
                   {
@@ -114,6 +118,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     show: "/tasks/show/:id",
                     meta: {
                       canDelete: true,
+                      icon:<SolutionOutlined />,
                     },
                   },
                   {
@@ -124,6 +129,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     show: "/categories/show/:id",
                     meta: {
                       canDelete: true,
+                      icon:<MenuOutlined />,
                     },
                   },
                   {
@@ -134,6 +140,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     show: "/profiles/show/:id",
                     meta: {
                       canDelete: true,
+                      icon:<UserOutlined />,
                     },
                   },
                 ]}
