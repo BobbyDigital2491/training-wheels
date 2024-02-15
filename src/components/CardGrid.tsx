@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Avatar, Card, Col, List, Row, Space, Statistic } from 'antd';
+import { Avatar, Card, Col, Descriptions, List, Row, Space, Statistic, Button } from 'antd';
 import { supabaseClient } from 'src/utility'; // Import the supabase client instance
 import Meta from 'antd/lib/card/Meta';
 
@@ -14,6 +14,7 @@ interface CardData {
   status: string;
   avatar_url: string; 
   description: string;
+  items: string;
 }
 
 const CardGrid: React.FC = () => {
@@ -47,7 +48,7 @@ const CardGrid: React.FC = () => {
   return (
     <Row gutter={[16, 16]}> {/* Add gutter with a vertical spacing of 16 units */}
       {data.map((item) => (
-        <Col key={item.id} xs={24} sm={12} md={8} lg={6} xl={6}> {/* Specify the desired column size for each card */}
+        <Col span={8} key={item.id} xs={24} sm={12} md={8} lg={6} xl={6}> {/* Specify the desired column size for each card */}
           <Card
             title={item.projects}
             cover={
@@ -65,7 +66,8 @@ const CardGrid: React.FC = () => {
             }
           >
             <Meta title={item.description} description={item.status} />
-            
+            <br/>
+            <Button type="primary" href={item.avatar_url}> Details</Button>
           </Card>
         </Col>
       ))}

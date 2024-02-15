@@ -1,5 +1,5 @@
 import React from "react";
-import { List, ShowButton, EditButton, useTable, DeleteButton } from "@refinedev/antd";
+import { List, ShowButton, EditButton, useTable, DeleteButton, Create, CreateButton } from "@refinedev/antd";
 import { Avatar, Card, Input, Space, Table } from "antd";
 import { BaseRecord } from "@refinedev/core";
 import { authProvider } from "src/authProvider";
@@ -11,8 +11,14 @@ export default function CategoryList() {
   const { tableProps } = useTable();
 
   return (
-    <Card title="Categories">
+    <Card>
+      <List>
+    <Card >
+     
     <CardGrid/>
+    
+    </Card>
+    </List>
     </Card>
   );
 };
