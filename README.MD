@@ -1,9 +1,7 @@
 # training-wheels
 
 <div align="center" style="margin: 30px;">
-    <a href="https://training-wheels-sigma.vercel.app/login">
-    <img alt="refine logo" src="https://www.viccci.xyz/log.png">
-    </a>
+    [![Training Wheels Logo](https://www.viccci.xyz/log.png)](https://training-wheels-sigma.vercel.app/login)
 </div>
 <br/>
 
