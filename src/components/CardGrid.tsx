@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Avatar, Card, Col, Descriptions, List, Row, Space, Statistic, Button } from 'antd';
+import { Avatar, Card, Col, Descriptions, Modal, Row, Button } from 'antd';
 import { supabaseClient } from 'src/utility'; // Import the supabase client instance
 import Meta from 'antd/lib/card/Meta';
+import QR from './QR';
 
 // Define an interface for the data structure
 interface CardData {
@@ -15,11 +16,16 @@ interface CardData {
   avatar_url: string; 
   description: string;
   items: string;
+  details: string;
 }
 
 const CardGrid: React.FC = () => {
   // State to hold the data fetched from the backend
   const [data, setData] = useState<CardData[]>([]);
+  // State to hold the selected card data for the modal
+  const [selectedCard, setSelectedCard] = useState<CardData | null>(null);
+  // State to manage the visibility of the modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // useEffect hook to fetch data from the backend when the component mounts
   useEffect(() => {
@@ -45,6 +51,17 @@ const CardGrid: React.FC = () => {
     }
   };
 
+  // Function to handle when a card is clicked
+  const handleCardClick = (card: CardData) => {
+    setSelectedCard(card); // Set the selected card data
+    setIsModalOpen(true); // Open the modal
+  };
+
+  // Function to handle when the modal is closed
+  const handleModalClose = () => {
+    setIsModalOpen(false); // Close the modal
+  };
+
   return (
     <Row gutter={[16, 16]}> {/* Add gutter with a vertical spacing of 16 units */}
       {data.map((item) => (
@@ -64,13 +81,35 @@ const CardGrid: React.FC = () => {
                 }} 
               />
             }
+            onClick={() => handleCardClick(item)} // Handle the card click event
           >
             <Meta title={item.description} description={item.status} />
-            <br/>
-            <Button type="primary" href={item.avatar_url}> Details</Button>
           </Card>
         </Col>
       ))}
+      {/* Render the modal outside of the data.map loop */}
+      <Modal title={selectedCard?.projects} visible={isModalOpen} onCancel={handleModalClose} footer={null}>
+        {selectedCard && (
+          <>
+            <Avatar 
+              size={150} // Set the size of the avatar
+              shape='square' 
+              alt="avatar" 
+              src={selectedCard.avatar_url} 
+              style={{ 
+                display: 'block', // Ensure the avatar is a square by removing any inherited styles
+                margin: '0 auto', // Center the avatar horizontally
+                marginBottom: 16 // Add margin to the bottom of the avatar
+              }} 
+            />
+            <Descriptions>
+              <Descriptions.Item label="Project">{selectedCard.projects}</Descriptions.Item>
+              <Descriptions.Item label="Details">{selectedCard.details}</Descriptions.Item>
+            </Descriptions>
+            
+          </>
+        )}
+      </Modal>
     </Row>
   );
 };
