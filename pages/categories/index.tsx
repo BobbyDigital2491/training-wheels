@@ -6,6 +6,7 @@ import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import CardGrid from "@components/CardGrid";
+import D2 from "@components/D2";
 
 export default function CategoryList() {
   const { tableProps } = useTable();
@@ -16,6 +17,7 @@ export default function CategoryList() {
     <Card >
      
     <CardGrid/>
+    <D2/>
     
     </Card>
     </List>

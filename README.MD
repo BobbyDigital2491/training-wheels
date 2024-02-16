@@ -1,8 +1,8 @@
 # training-wheels
 
-<div align="center" style="margin: 30px;">
-    [![Training Wheels Logo](https://www.viccci.xyz/log.png)](https://training-wheels-sigma.vercel.app/login)
-</div>
+<p align="center">
+  <img src="https://viccci.xyz/log.png" />
+</p>
 <br/>
 
 This [Refine](https://github.com/refinedev/refine) project was generated with [create refine-app](https://github.com/refinedev/refine/tree/master/packages/create-refine-app).

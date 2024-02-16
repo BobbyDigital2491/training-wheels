@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Avatar, Card, Col, Descriptions, Modal, Row, Button } from 'antd';
+import { Avatar, Card, Col, Descriptions, Modal, Row, Button, Space } from 'antd';
 import { supabaseClient } from 'src/utility'; // Import the supabase client instance
 import Meta from 'antd/lib/card/Meta';
 import QR from './QR';
@@ -104,9 +104,9 @@ const CardGrid: React.FC = () => {
             />
             <Descriptions>
               <Descriptions.Item label="Project">{selectedCard.projects}</Descriptions.Item>
-              <Descriptions.Item label="Details">{selectedCard.details}</Descriptions.Item>
+              
             </Descriptions>
-            
+            <Descriptions.Item label="Details">{selectedCard.details}</Descriptions.Item>
           </>
         )}
       </Modal>

@@ -17,8 +17,6 @@ export default function TaskList() {
         
         <Table.Column dataIndex="to_be_done" title="To Do" />
         <Table.Column dataIndex="complete" title="Complete" />
-        <Table.Column dataIndex="pending" title="Pending" />
-        <Table.Column dataIndex="on_task" title="On task" />
         <Table.Column
           title="Actions"
           dataIndex="actions"

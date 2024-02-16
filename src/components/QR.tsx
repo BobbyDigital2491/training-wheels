@@ -41,6 +41,9 @@ const QR: React.FC = () => {
         iconSize={size / 4}
         value="https://viccci.xyz/"
         icon="https://viccci.xyz/log.png"
+        color='blue'
+        bgColor='white'
+        bordered
       />
     </>
   );
