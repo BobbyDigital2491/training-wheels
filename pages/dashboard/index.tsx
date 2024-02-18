@@ -1,6 +1,6 @@
 import React from "react";
 import { useTable } from "@refinedev/antd";
-import { Card, Col, Row, Space, Statistic, Table, Timeline, Calendar, Checkbox, Form, Progress, Carousel, Tooltip } from "antd";
+import { Card, Col, Row, Space, Statistic, Table, Timeline, Calendar, Checkbox, Form, Progress, Carousel, Tooltip, Flex } from "antd";
 import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -32,7 +32,7 @@ export default function ProjectList() {
 
   return (
     <>
-    {/*shhs*/}
+    {/*Top of Card*/}
     <Card title="Dashboard">
         {/*Team Card*/}
         <Card title="General">
@@ -52,7 +52,13 @@ export default function ProjectList() {
           </Row>
         </Card>
         <br />
-        <Card style={{ width: '100%' }}><MobileGraph/></Card>
+        <Card style={{ width: '100%' }}>
+          <Flex>
+          <MobileGraph/>
+          
+          </Flex>
+          
+        </Card>
         {/*Stat Cards*/}
         <Card title="Stats">
           <Row gutter={16}>

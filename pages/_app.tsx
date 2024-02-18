@@ -23,7 +23,7 @@ import { appWithTranslation, useTranslation } from "next-i18next";
 import { authProvider } from "src/authProvider";
 import { AppIcon } from "src/components/app-icon";
 import { supabaseClient } from "src/utility";
-import { DashboardOutlined, MenuOutlined, SolutionOutlined, StarOutlined, TableOutlined, UserOutlined } from "@ant-design/icons";
+import { AppstoreOutlined, DashboardOutlined, MenuOutlined, ProjectOutlined, SolutionOutlined, StarOutlined, TableOutlined, UserOutlined } from "@ant-design/icons";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   noLayout?: boolean;
@@ -123,6 +123,13 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     },
                   },
                   {
+                    name: "operations",
+                    meta: {
+                      canDelete: true,
+                      icon:<MenuOutlined />,
+                    },
+                  },
+                  {
                     name: "categories",
                     list: "/categories",
                     create: "/categories/create",
@@ -130,8 +137,20 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     show: "/categories/show/:id",
                     meta: {
                       canDelete: true,
-                      icon:<MenuOutlined />,
-                      parent:""
+                      icon:<AppstoreOutlined />,
+                      parent:"Operations"
+                    },
+                  },
+                  {
+                    name: "Training-Modules",
+                    list: "/categories",
+                    create: "/categories/create",
+                    edit: "/categories/edit/:id",
+                    show: "/categories/show/:id",
+                    meta: {
+                      canDelete: true,
+                      icon:<ProjectOutlined />,
+                      parent:"Operations"
                     },
                   },
                   {

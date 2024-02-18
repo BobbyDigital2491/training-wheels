@@ -33,6 +33,7 @@
     "@visx/gradient": "^3.3.0",
     "@visx/group": "^3.3.0",
     "@visx/mock-data": "^3.3.0",
+    "@visx/responsive": "^3.3.0",
     "@visx/scale": "^3.5.0",
     "@visx/shape": "^3.5.0",
     "antd": "^5.0.5",
