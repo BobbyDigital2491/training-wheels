@@ -5,7 +5,7 @@ import { Group } from '@visx/group';
 import { GradientTealBlue } from '@visx/gradient';
 import letterFrequency, { LetterFrequency } from '@visx/mock-data/lib/mocks/letterFrequency';
 import browserUsage, { BrowserUsage as Browsers } from '@visx/mock-data/lib/mocks/browserUsage';
-import { animated, useTransition, interpolate } from '@react-spring/web';
+import { animated, useTransition, to } from '@react-spring/web';
 
 // data and types
 type BrowserNames = keyof Browsers;
@@ -188,7 +188,7 @@ function AnimatedPie<Datum>({
       <g key={key}>
         <animated.path
           // compute interpolated path d attribute from intermediate angle values
-          d={interpolate([props.startAngle, props.endAngle], (startAngle, endAngle) =>
+          d={to([props.startAngle, props.endAngle], (startAngle, endAngle) =>
             path({
               ...arc,
               startAngle,
