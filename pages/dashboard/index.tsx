@@ -10,6 +10,7 @@ import TimelineItem from "antd/lib/timeline/TimelineItem";
 import { useState } from "react";
 import { Gauge, Line } from "@ant-design/charts";
 import LineGraph from "@components/LineGraph";
+import MobileGraph from "@components/MobileGraph";
 
 
 export default function ProjectList() {
@@ -31,7 +32,6 @@ export default function ProjectList() {
 
   return (
     <>
-    
     {/*shhs*/}
     <Card title="Dashboard">
         {/*Team Card*/}
@@ -52,7 +52,7 @@ export default function ProjectList() {
           </Row>
         </Card>
         <br />
-
+        <Card style={{ width: '100%' }}><MobileGraph/></Card>
         {/*Stat Cards*/}
         <Card title="Stats">
           <Row gutter={16}>
