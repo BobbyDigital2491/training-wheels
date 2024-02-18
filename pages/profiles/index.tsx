@@ -6,6 +6,8 @@ import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { UserOutlined } from "@ant-design/icons";
+import BlogPostsList from "@components/CompanyInfo";
+import CompanyInfo from "@components/CompanyInfo";
 
 export default function ProjectList() {
   const { tableProps } = useTable();
@@ -36,7 +38,12 @@ export default function ProjectList() {
             </Space>
           )} />
       </Table>
-    </Card></>
+    </Card>
+    <br/>
+    <Card>
+      <CompanyInfo/>
+    </Card>
+      </>
       
   );
 }

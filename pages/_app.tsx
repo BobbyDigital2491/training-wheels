@@ -86,6 +86,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     meta: {
                       canDelete: true,
                       icon:<DashboardOutlined/>,
+                      
                     },
                   },
                   {
@@ -130,6 +131,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     meta: {
                       canDelete: true,
                       icon:<MenuOutlined />,
+                      parent:""
                     },
                   },
                   {
