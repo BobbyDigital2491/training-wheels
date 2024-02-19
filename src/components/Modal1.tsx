@@ -63,7 +63,7 @@ const Modal1: React.FC = () => {
         Details
       </Button>
       {/* Render the modal outside of the data.map loop */}
-      <Modal title={modalData?.projects} visible={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+      <Modal title={modalData?.projects} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
         {modalData && (
           <div>
             <p>{modalData.title}</p>

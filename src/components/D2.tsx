@@ -18,7 +18,7 @@ const App: React.FC = () => {
   return (
     <>
       <Space>
-        <Button type="primary" onClick={showDrawer}>
+        <Button type="primary" onClick={showDrawer} >
           Open
         </Button>
       </Space>

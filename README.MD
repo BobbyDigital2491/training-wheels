@@ -1,7 +1,7 @@
 # training-wheels
 
 <p align="center">
-  <img src="https://viccci.xyz/log.png" />
+  <img src="/public/favicon.ico" />
 </p>
 <br/>
 

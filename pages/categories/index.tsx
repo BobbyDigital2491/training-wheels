@@ -17,7 +17,6 @@ export default function CategoryList() {
     <Card >
      
     <CardGrid/>
-    <D2/>
     
     </Card>
     </List>

@@ -139,17 +139,30 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                       canDelete: true,
                       icon:<AppstoreOutlined />,
                       parent:"Operations"
+                      
                     },
                   },
                   {
                     name: "Training-Modules",
-                    list: "/categories",
+                    list: "/training-modules",
                     create: "/categories/create",
                     edit: "/categories/edit/:id",
                     show: "/categories/show/:id",
                     meta: {
                       canDelete: true,
                       icon:<ProjectOutlined />,
+                      parent:"Operations"
+                    },
+                  },
+                  {
+                    name: "Standard Method & Procedure (SMP)",
+                    list: "/smp",
+                    create: "/smp/create",
+                    edit: "/smp/edit/:id",
+                    show: "/smp/show/:id",
+                    meta: {
+                      canDelete: true,
+                      icon:<MenuOutlined />,
                       parent:"Operations"
                     },
                   },
