@@ -23,7 +23,7 @@ import { appWithTranslation, useTranslation } from "next-i18next";
 import { authProvider } from "src/authProvider";
 import { AppIcon } from "src/components/app-icon";
 import { supabaseClient } from "src/utility";
-import { AppstoreOutlined, DashboardOutlined, MenuOutlined, ProjectOutlined, SolutionOutlined, StarOutlined, TableOutlined, UserOutlined } from "@ant-design/icons";
+import { AppstoreOutlined, DashboardOutlined, DeliveredProcedureOutlined, MenuOutlined, ProjectOutlined, SolutionOutlined, StarOutlined, StarTwoTone, TableOutlined, UserOutlined } from "@ant-design/icons";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   noLayout?: boolean;
@@ -162,7 +162,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     show: "/SMP/show/:id",
                     meta: {
                       canDelete: true,
-                      icon:<MenuOutlined />,
+                      icon:<DeliveredProcedureOutlined />,
                       parent:"Operations"
                     },
                   },
