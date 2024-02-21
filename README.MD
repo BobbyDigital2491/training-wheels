@@ -19,7 +19,3 @@ After sign up use the supabase auth provider to sign in to your dashboard.
 
 MIT
 # training-wheels
-# training-wheels
-# training-wheels
-# training-wheels
-# training-wheels
