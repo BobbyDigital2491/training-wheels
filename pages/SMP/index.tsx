@@ -13,11 +13,19 @@ export default function SMPList() {
     <Card>
     <List>
       <Table {...tableProps} rowKey="id">
-        
-        <Table.Column dataIndex="no" title="Title" />
-        <Table.Column dataIndex="content" title="Content" />
-        <Table.Column dataIndex="created_at" title="Created at" />
-        <Table.Column dataIndex="work_element" title="Production Lines" />
+        <Table.Column dataIndex="no" title="No" />
+        <Table.Column dataIndex="work_element" title="Work Element" />
+        <Table.Column dataIndex="plan_no" title="Plan_No" />
+        <Table.Column dataIndex="element_time" title="Element Time" />
+        <Table.Column dataIndex="mv" title="MV[%]" />
+        <Table.Column dataIndex="mod" title="Mod" />
+        <Table.Column dataIndex="model_type" title="Model Type" />
+        <Table.Column dataIndex="st" title="ST" />
+        <Table.Column dataIndex="code" title="Code" />
+        <Table.Column dataIndex="symbol" title="Symbol" />
+        <Table.Column dataIndex="vp" title="VP" />
+        <Table.Column dataIndex="tps" title="TPS" />
+        <Table.Column dataIndex="jes" title="JES" />
         <Table.Column
           title="Actions"
           dataIndex="actions"
