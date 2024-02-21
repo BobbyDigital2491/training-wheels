@@ -13,7 +13,7 @@ import LineGraph from "@components/LineGraph";
 import MobileGraph from "@components/MobileGraph";
 
 
-export default function ProjectList() {
+export default function Dashboard() {
   const { tableProps } = useTable();
 
   const onPanelChange = (value: Dayjs, mode: any) => {

@@ -25,6 +25,7 @@ type IUser = {
   name: string;
   avatar: string;
   avatar_url: string;
+  user_name: string;
 };
 
 export const Header: React.FC<RefineThemedLayoutV2HeaderProps> = ({

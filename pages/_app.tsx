@@ -156,10 +156,10 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                   },
                   {
                     name: "Standard Method & Procedure (SMP)",
-                    list: "/smp",
-                    create: "/smp/create",
-                    edit: "/smp/edit/:id",
-                    show: "/smp/show/:id",
+                    list: "/SMP",
+                    create: "/SMP/create",
+                    edit: "/SMP/edit/:id",
+                    show: "/SMP/show/:id",
                     meta: {
                       canDelete: true,
                       icon:<MenuOutlined />,

@@ -3,7 +3,7 @@ import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { authProvider } from "src/authProvider";
 
-export default function SmpCreate() {
+export default function SMPCreate() {
   return <AntdCreateInferencer hideCodeViewerInProduction/>;
 }
 

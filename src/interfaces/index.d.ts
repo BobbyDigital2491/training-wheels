@@ -3,6 +3,7 @@
 export interface ICategory {
     id: string;
     title: string;
+    record: string;
   }
   
   export interface IFile {
@@ -13,6 +14,7 @@ export interface ICategory {
     type: string;
     uid: string;
     url: string;
+    id: string;
   }
   
   export interface IPost {
@@ -28,6 +30,36 @@ export interface ICategory {
     sort: string | null; // Assuming `sort` can be null based on your SQL schema
     images: IFile[];
     category_id: number | null;
+    category:string;
+    no:string;
+    work_element:string;
+    plan_no:string;
+    element_time:string;
+    mv:string;
+    mod:string;
+    model_type:string;
+    st:string;
+    code:string;
+    symbol:string;
+    vp:string;
+    tps:string;
+    jes:string;
     
+  }
+  
+  export interface ShowData {
+    no: string;
+    work_element: string;
+    plan_no: string;
+    element_time: string;
+    mv: string;
+    mod: string;
+    model_type: string;
+    st: string;
+    code: string;
+    symbol: string;
+    vp: string;
+    tps: string;
+    jes: string;
   }
   
