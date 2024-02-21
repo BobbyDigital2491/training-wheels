@@ -40,7 +40,7 @@ const ShowDetails: React.FC<{ data: ShowData }> = ({ data }) => {
     );
 };
 
-const smpShow: React.FC<{ data: ShowData }> = ({ data }) => {
+const SMPShow: React.FC<{ data: ShowData }> = ({ data }) => {
     return (
         <div>
             <ShowDetails data={data} />
@@ -48,7 +48,7 @@ const smpShow: React.FC<{ data: ShowData }> = ({ data }) => {
     );
 };
 
-export default smpShow;
+export default SMPShow;
 
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
     const { params } = context;
