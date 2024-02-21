@@ -1,4 +1,5 @@
 import { Show } from "@refinedev/antd";
+import { Card, Divider } from "antd";
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useState, useEffect } from "react";
@@ -17,22 +18,48 @@ interface ShowData {
     code: string;
     symbol: string;
     vp: string;
+    no:string;
 }
 
 const ShowDetails: React.FC<{ data: ShowData }> = ({ data }) => {
     return (
-        <Show>
-            <p>Work Element: {data.work_element}</p>
-            <p>ID: {data.id}</p>
-            <p>Plan Number: {data.plan_no}</p>
-            <p>Element Time: {data.element_time}</p>
-            <p>MV: {data.mv}</p>
-            <p>Mod: {data.mod}</p>
-            <p>Model Type: {data.model_type}</p>
-            <p>ST: {data.st}</p>
-            <p>Code: {data.code}</p>
-            <p>Symbol: {data.symbol}</p>
-            <p>VP: {data.vp}</p>
+        <Show title="SMP Data">
+            <Card>
+            <h3>No</h3>
+            {data.no}
+            <Divider/>
+            
+            <h3>Work Element: </h3>
+            {data.work_element}
+            <Divider/>
+
+            <h3>Plan Number:</h3>
+            {data.plan_no}
+            <Divider/>
+            <p>Element Time:</p>
+            {data.element_time}
+            <Divider/>
+            <p>MV:</p>
+            {data.mv}
+            <Divider/>
+            <p>Mod:</p>
+            {data.mod}
+            <Divider/>
+            <p>Model Type:</p>
+            {data.model_type}
+            <Divider/>
+            <p>ST:</p>
+            {data.st}
+            <Divider/>
+            <p>Code:</p>
+            {data.code}
+            <Divider/>
+            <p>Symbol:</p>
+            {data.symbol}
+            <Divider/>
+            <p>VP:</p>
+            {data.vp}
+            </Card>
         </Show>
     );
 };
