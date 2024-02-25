@@ -21,6 +21,7 @@ interface TrainingData {
   no: string;
   instructions: string;
   image: string;
+  video: string;
 }
 
 const TrainingModal: React.FC = () => {
@@ -111,6 +112,8 @@ const TrainingModal: React.FC = () => {
               
             </Descriptions>
             <Descriptions.Item label="Details">{selectedCard.instructions}</Descriptions.Item>
+            <br/><br/>
+            <Button block type='primary' color='Blue' href={selectedCard.video}>Watch Video</Button>
           </>
         )}
       </Modal>

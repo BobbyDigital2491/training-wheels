@@ -19,14 +19,13 @@ export default function ProjectList() {
       <Table {...tableProps} rowKey="id">
         <Table.Column
           dataIndex="avatar_url"
-          title="User"
+          title="Avatar"
           render={(avatarUrl) => (
             <Avatar shape="circle" src={avatarUrl} size={50} icon={<UserOutlined />} />
           )} />
         <Table.Column dataIndex="username" title="Username" />
+        <Table.Column dataIndex="full_name" title="Full Name" />
         <Table.Column dataIndex="role" title="Role" />
-        <Table.Column dataIndex="full_name" title="Full Name" />
-        <Table.Column dataIndex="full_name" title="Full Name" />
         <Table.Column dataIndex="email_address" title="Email" />
         <Table.Column
           title="Actions"

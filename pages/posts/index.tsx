@@ -1,19 +1,24 @@
 import React from "react";
 import { List, ShowButton, EditButton, useTable, DeleteButton } from "@refinedev/antd";
 import { Card, Space, Table } from "antd";
-import { BaseRecord } from "@refinedev/core";
+import { BaseKey, BaseRecord } from "@refinedev/core";
 import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function PostList() {
   const { tableProps } = useTable();
+  
+  
+  type BaseRecord = {
+    id?: BaseKey;
+    [key: string]: any;
+  };
 
   return (
     <Card>
     <List>
       <Table {...tableProps} rowKey="id">
-        
         <Table.Column dataIndex="title" title="Title" />
         <Table.Column dataIndex="content" title="Content" />
         <Table.Column dataIndex="created_at" title="Created at" />
@@ -25,7 +30,7 @@ export default function PostList() {
             <Space>
               <ShowButton hideText size="small" recordItemId={record.id} />
               <EditButton hideText size="small" recordItemId={record.id} />
-              <DeleteButton hideText size="small" recordItemId={record.id} />
+              <DeleteButton hideText size="small" resource="posts" recordItemId={record.id} />
             </Space>
           )}
         />

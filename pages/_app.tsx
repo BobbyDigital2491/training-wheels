@@ -17,7 +17,7 @@ import { AppProps } from "next/app";
 import { Header } from "@components/header";
 import { ColorModeContextProvider } from "@contexts";
 import "@refinedev/antd/dist/reset.css";
-import { dataProvider } from "@refinedev/supabase";
+import { dataProvider, liveProvider } from "@refinedev/supabase";
 import { App as AntdApp } from "antd";
 import { appWithTranslation, useTranslation } from "next-i18next";
 import { authProvider } from "src/authProvider";
@@ -74,6 +74,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                 routerProvider={routerProvider}
                 dataProvider={dataProvider(supabaseClient)}
                 authProvider={authProvider}
+                liveProvider={liveProvider(supabaseClient)}
                 notificationProvider={useNotificationProvider}
                 i18nProvider={i18nProvider}
                 resources={[
