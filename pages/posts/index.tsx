@@ -22,7 +22,6 @@ export default function PostList() {
         <Table.Column dataIndex="title" title="Title" />
         <Table.Column dataIndex="content" title="Content" />
         <Table.Column dataIndex="created_at" title="Created at" />
-        <Table.Column dataIndex="production_lines" title="Production Lines" />
         <Table.Column
           title="Actions"
           dataIndex="actions"

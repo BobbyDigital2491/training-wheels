@@ -21,7 +21,7 @@ export const normalizeFile = (event: EventArgs) => {
             type,
             size,
             percent,
-            status,
+            status
             
         };
     });
