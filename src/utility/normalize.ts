@@ -12,7 +12,7 @@ export const normalizeFile = (event: EventArgs) => {
     const { fileList } = event;
 
     return fileList.map((item) => {
-        const { uid, name, type, size, response, percent, status, number } = item;
+        const { uid, name, type, size, response, percent, status } = item;
 
         return {
             uid,
@@ -22,7 +22,7 @@ export const normalizeFile = (event: EventArgs) => {
             size,
             percent,
             status,
-            number,
+            
         };
     });
 };
