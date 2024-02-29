@@ -1,4 +1,4 @@
-# Training Wheels Protocol
+# Training Wheels 
 
 <p align="center">
   <img src="/public/favicon.ico" />
