@@ -1,11 +1,11 @@
-# training-wheels
+# Training Wheels Protocol
 
 <p align="center">
   <img src="/public/favicon.ico" />
 </p>
 <br/>
 
-This [Viccci Protocol](https://viccci.xyz) project was generated with [create refine-app](https://github.com/refinedev/refine/tree/master/packages/create-refine-app).
+This [Viccci Protocol](https://viccci.xyz) project was created to be a project managment dashboard for all use cases.
 
 ## Getting Started
 
@@ -18,4 +18,4 @@ After sign up use the supabase auth provider to sign in to your dashboard.
 ## License
 
 MIT
-# training-wheels
+# Training Wheels Protocol

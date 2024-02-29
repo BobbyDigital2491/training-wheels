@@ -13,7 +13,6 @@ export default function Register() {
       type="register"
       formProps={{
         initialValues: {
-          userName: "info@viccci.xyz",
           email: "info@viccci.xyz",
           password: "Dashboard",
         },

@@ -96,6 +96,7 @@ const TrainingModal: React.FC = () => {
       <Modal title={selectedCard?.projects} visible={isModalOpen} onCancel={handleModalClose} footer={null}>
         {selectedCard && (
           <>
+          <h2>{selectedCard.id}</h2>
             <Avatar 
               size={400} // Set the size of the avatar
               shape='square' 

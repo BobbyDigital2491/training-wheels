@@ -6,10 +6,9 @@ import { authProvider } from "src/authProvider";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { UserOutlined } from "@ant-design/icons";
-import BlogPostsList from "@components/CompanyInfo";
 import CompanyInfo from "@components/CompanyInfo";
 
-export default function ProjectList() {
+export default function ProfileList() {
   const { tableProps } = useTable();
 
   return (
@@ -19,11 +18,11 @@ export default function ProjectList() {
       <Table {...tableProps} rowKey="id">
         <Table.Column
           dataIndex="avatar_url"
-          title="Avatar"
+          title="Display"
           render={(avatarUrl) => (
             <Avatar shape="circle" src={avatarUrl} size={50} icon={<UserOutlined />} />
           )} />
-        <Table.Column dataIndex="username" title="Username" />
+        <Table.Column dataIndex="display_name" title="Username" />
         <Table.Column dataIndex="full_name" title="Full Name" />
         <Table.Column dataIndex="role" title="Role" />
         <Table.Column dataIndex="email_address" title="Email" />

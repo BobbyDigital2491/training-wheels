@@ -91,6 +91,53 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     },
                   },
                   {
+                    name: "operations",
+                    meta: {
+                      canDelete: true,
+                      icon:<MenuOutlined />,
+                    },
+                  },
+                  {
+                    name: "Standard Method & Procedure (SMP)",
+                    list: "/SMP",
+                    create: "/SMP/create",
+                    edit: "/SMP/edit/:id",
+                    show: "/SMP/show/:id",
+                    meta: {
+                      canDelete: true,
+                      icon:<DeliveredProcedureOutlined />,
+                      parent:"Operations",
+                      label:"SMP",
+                      
+                    },
+                  },
+                  {
+                    name: "JES",
+                    list: "/JES",
+                    create: "/JES/create",
+                    edit: "/JES/edit/:id",
+                    show: "/JES/show/:id",
+                    meta: {
+                      canDelete: true,
+                      icon:<DeliveredProcedureOutlined />,
+                      parent:"Operations",
+                      label:"JES"
+                    },
+                  },
+                  {
+                    name: "Training-Modules",
+                    list: "/training-modules",
+                    create: "/categories/create",
+                    edit: "/categories/edit/:id",
+                    show: "/categories/show/:id",
+                    meta: {
+                      canDelete: true,
+                      icon:<ProjectOutlined />,
+                      parent:"Operations",
+                      label:"Training Modules",
+                    },
+                  },
+                  {
                     name: "projects",
                     list: "/projects",
                     create: "/projects/create",
@@ -124,13 +171,6 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     },
                   },
                   {
-                    name: "operations",
-                    meta: {
-                      canDelete: true,
-                      icon:<MenuOutlined />,
-                    },
-                  },
-                  {
                     name: "categories",
                     list: "/categories",
                     create: "/categories/create",
@@ -138,33 +178,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                     show: "/categories/show/:id",
                     meta: {
                       canDelete: true,
-                      icon:<AppstoreOutlined />,
-                      parent:"Operations"
-                      
-                    },
-                  },
-                  {
-                    name: "Training-Modules",
-                    list: "/training-modules",
-                    create: "/categories/create",
-                    edit: "/categories/edit/:id",
-                    show: "/categories/show/:id",
-                    meta: {
-                      canDelete: true,
-                      icon:<ProjectOutlined />,
-                      parent:"Operations"
-                    },
-                  },
-                  {
-                    name: "Standard Method & Procedure (SMP)",
-                    list: "/SMP",
-                    create: "/SMP/create",
-                    edit: "/SMP/edit/:id",
-                    show: "/SMP/show/:id",
-                    meta: {
-                      canDelete: true,
-                      icon:<DeliveredProcedureOutlined />,
-                      parent:"Operations"
+                      icon:<AppstoreOutlined />,                    
                     },
                   },
                   {
@@ -185,6 +199,10 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
                   warnWhenUnsavedChanges: true,
                   useNewQueryKeys: true,
                   projectId: "hvXL8W-YsyqHT-h8SPxs",
+                  textTransformers: {
+                    plural: (text) => text,
+                    singular: (text) => text,
+                  },
                 }}
               >
                 {renderComponent()}
